@@ -66,7 +66,7 @@ module.exports = function (app) {
   },
   function(req, res, next){
     if(!runner.report) return next();
-    res.json(testFilter(runner.report, req.query.type, req.query.n));
+    res.json(testFilter(runner.report, req.query.type, req.query.n)); 
   },
   function(req, res){
     runner.on('done', function(report){
